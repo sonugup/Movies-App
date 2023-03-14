@@ -1,0 +1,14 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.app{
+  background-color: #FFFFFF;
+  /* background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%); */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8NRIHCF2cn8rhfi67WwfJVf8tY2ORmB3nAQ&usqp=CAU");
+  background-size: cover;
+  height: 100vh;
+}
+
+

@@ -1,0 +1,16 @@
+
+
+.navbar{
+    width: 100%;
+    color: black;
+    background-color: teal;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+.navbar input{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+}
