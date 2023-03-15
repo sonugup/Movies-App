@@ -19,14 +19,19 @@ const MoviesDetels = () => {
     getData()
   }, [])
   return (
-    <div>
+    <div className='main1'>
+      <div className='Onebox'> 
+      <div className='imgdiv'>
       <img src={data.Poster} alt="Poster" />
-      <div>
-        <h3>{data.Title} </h3>
-        <p>{data.Year}</p>
-        <p>{data.imdbID}</p>
-        <p> {data.Type} </p>
+      </div>
+      
+      <div className='catepril'>
+        <h3 className='title'>Title: {data.Title} </h3>
+        <p className='price' > Year: {data.Year}</p>
+        <p> ID: {data.imdbID}</p>
+        <p className='des'> Type: {data.Type} </p>
         </div>
+      </div>
     </div>
   )
 }

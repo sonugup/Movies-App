@@ -6,14 +6,20 @@ import "./movies.css";
 const MoviesList = () => {
   const [title, setTitle] = useState();
   const [movie, setMovie] = useState([]);
-  const [timeoutId, setTimeoutId] = useState();
+  const [timeoutId, setTimeoutId] = useState(2000);
+
+  const [loading, setLoading] = useState(true)
+
+
+  
 
   const getMovieData = async (query) => {
     const data = await axios.get(
       `https://www.omdbapi.com/?apikey=86497aee&s=${query}`
     );
     setMovie(data.data.Search);
-    // console.log(data.data.Search)
+    setLoading(false)
+    console.log(data.data.Search)
   };
   const datahenldal = (event) => {
     try {
@@ -28,7 +34,7 @@ const MoviesList = () => {
 
   console.log(movie);
   return (
-    <div>
+    <div className="container">
       <nav className="navbar">
         <input
           onChange={datahenldal}
@@ -38,16 +44,13 @@ const MoviesList = () => {
         />
       </nav>
 
-      <div>
-        {movie.length ? (
-          movie.map((el, index) => <Moviesfrtch key={index} el={el} />)
+      <div className="main">
+
+        
+        {movie?.length ? movie.map((el, index) => <Moviesfrtch key={index} el={el} />
         ) : (
-          <div>
-            {/* <h1> Search any Movie</h1>  */}
-            <img
-              src="https://shifu.hotstarext.com/SOURCE/VOD/cd-2022-06-18/D1-cde61892-51a8-4a30-8497-fca15c870587.jpg"
-              alt=""
-            />{" "}
+          <div className="Else">
+            <h2> NO SEARCH MOVIE</h2>
           </div>
         )}
       </div>
